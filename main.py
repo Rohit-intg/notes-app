@@ -8,6 +8,10 @@ notes = []
 def home():
     return {"message": "Welcome to Notes App"}
 
+@app.get("/collab")
+def collab_route():
+    return {"message": "collabed"}
+
 @app.post("/add_note")
 def add_note(note: str):
     notes.append(note)
