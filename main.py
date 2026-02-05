@@ -23,3 +23,7 @@ def delete_note(index: int):
         removed = notes.pop(index)
         return {"message": "Note deleted", "removed": removed}
     return {"error": "Note not found"}
+
+@app.get("/api")
+def rest_api():
+    return { "message": "messaage" }
